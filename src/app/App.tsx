@@ -1,5 +1,9 @@
+import AppRouter from "./providers/router/AppRouter";
+
 function App() {
-  return <div>Project Manager</div>;
+  return <div className="app">
+    <AppRouter />
+  </div>;
 }
 
 export default App;
