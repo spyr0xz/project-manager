@@ -1,0 +1,12 @@
+.input {
+  padding: 20px 26px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--light-purple);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--secondary-purple);
+  font-size: 15px;
+}
