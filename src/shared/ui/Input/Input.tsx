@@ -14,7 +14,7 @@ interface InputProps extends HTMLInputProps {
   value?: string;
 }
 
-const Input: FC<InputProps> = memo((props) => {
+const Input: FC<InputProps> = memo((props) => { 
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value);
   };
