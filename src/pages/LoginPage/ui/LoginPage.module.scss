@@ -1,0 +1,51 @@
+.LoginPage {
+  height: 100vh;
+  background: url("/assets/images/work-in-desk.png");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: bottom center;
+  overflow-y: hidden;
+}
+
+.logo {
+  font-weight: 600;
+  padding-top: 31px;
+  padding-left: 42px;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  padding: 0 175px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.title_descr {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 53px;
+  line-height: 40px;
+}
+
+.descr {
+  max-width: 300px;
+}
+
+.descr span {
+  font-weight: 600;
+  color: var(--primary-purple);
+  cursor: pointer;
+}
