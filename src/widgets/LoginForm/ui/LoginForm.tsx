@@ -30,7 +30,7 @@ const LoginForm: FC<LoginFormProps> = (props) => {
   }, [dispatch])
 
   const onLoginClick = useCallback(() => {
-    //  Реализовать фичыу loginByEmail({username, password})
+    //  Реализовать фичу loginByEmail({username, password})
   }, [])
   return (
     
