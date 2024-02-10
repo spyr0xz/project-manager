@@ -5,5 +5,5 @@ export interface StateSchema {
   user: UserSchema;
 
   // async reducers
-  login: LoginByEmailSchema;
+  loginForm?: LoginByEmailSchema;
 }
