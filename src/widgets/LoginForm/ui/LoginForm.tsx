@@ -4,9 +4,9 @@ import { classNames } from "../../../shared/lib/classNames/classNames";
 import Input from "../../../shared/ui/Input/Input";
 import Button from "../../../shared/ui/Button/Button";
 import { useDispatch, useSelector } from "react-redux";
-import { loginActions } from "../../../features/loginByEmail/slice/loginSlice";
-import { getEmailValue } from "../../../features/loginByEmail/selectors/getEmailValue/getEmailValue";
-import { getPasswordValue } from "../../../features/loginByEmail/selectors/getPasswordValue/getPasswordValue";
+import { loginActions } from "../../../features/loginByEmail/model/slice/loginSlice";
+import { getEmailValue } from "../../../features/loginByEmail/model/selectors/getEmailValue/getEmailValue";
+import { getPasswordValue } from "../../../features/loginByEmail/model/selectors/getPasswordValue/getPasswordValue";
 
 interface LoginFormProps extends FormHTMLAttributes<HTMLFormElement> {
   className?: string;
@@ -30,7 +30,7 @@ const LoginForm: FC<LoginFormProps> = (props) => {
   }, [dispatch])
 
   const onLoginClick = useCallback(() => {
-    //  Реализовать фичу loginByEmail({username, password})
+    
   }, [])
   return (
     
