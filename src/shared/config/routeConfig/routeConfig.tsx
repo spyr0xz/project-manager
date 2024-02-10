@@ -1,4 +1,4 @@
-import { RouteProps } from "react-router-dom";
+import { Navigate, RouteProps } from "react-router-dom";
 import { LoginPage } from "../../../pages/LoginPage";
 import MainPage from "../../../pages/MainPage/ui/MainPage";
 import { NotFoundPage } from "../../../pages/NotFoundPage";
@@ -18,11 +18,11 @@ export const routePath: Record<AppRoutes, string> = {
 export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.LOGIN]: {
     path: routePath.login,
-    element: <LoginPage />
+    element: <LoginPage />,
   },
   [AppRoutes.MAIN]: {
     path: routePath.main,
-    element: <MainPage />
+    element: <MainPage />,
   },
   [AppRoutes.NOT_FOUND]: {
     path: routePath.not_found,
