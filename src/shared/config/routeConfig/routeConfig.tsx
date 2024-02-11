@@ -3,6 +3,10 @@ import { LoginPage } from "../../../pages/LoginPage";
 import MainPage from "../../../pages/MainPage/ui/MainPage";
 import { NotFoundPage } from "../../../pages/NotFoundPage";
 
+export type AppRouteProps = RouteProps & {
+  isAuthOnly?: boolean;
+}
+
 export enum AppRoutes  {
   LOGIN = 'login',
   MAIN = 'main',
@@ -11,11 +15,11 @@ export enum AppRoutes  {
 
 export const routePath: Record<AppRoutes, string> = {
   [AppRoutes.LOGIN]: '/login',
-  [AppRoutes.MAIN]: '/main',
+  [AppRoutes.MAIN]: '/',
   [AppRoutes.NOT_FOUND]: '*'
 }
 
-export const routeConfig: Record<AppRoutes, RouteProps> = {
+export const routeConfig: Record<AppRoutes, AppRouteProps> = {
   [AppRoutes.LOGIN]: {
     path: routePath.login,
     element: <LoginPage />,
@@ -23,6 +27,7 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.MAIN]: {
     path: routePath.main,
     element: <MainPage />,
+    isAuthOnly: true,
   },
   [AppRoutes.NOT_FOUND]: {
     path: routePath.not_found,
