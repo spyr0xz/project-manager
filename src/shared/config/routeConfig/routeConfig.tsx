@@ -1,28 +1,29 @@
-import { Navigate, RouteProps } from "react-router-dom";
-import { LoginPage } from "../../../pages/LoginPage";
+import { RouteProps } from "react-router-dom";
+
 import MainPage from "../../../pages/MainPage/ui/MainPage";
 import { NotFoundPage } from "../../../pages/NotFoundPage";
+import { AuthPage } from "../../../pages/AuthPage";
 
 export type AppRouteProps = RouteProps & {
   isAuthOnly?: boolean;
 }
 
 export enum AppRoutes  {
-  LOGIN = 'login',
+  AUTH = 'auth',
   MAIN = 'main',
   NOT_FOUND = 'not_found'
 }
 
 export const routePath: Record<AppRoutes, string> = {
-  [AppRoutes.LOGIN]: '/login',
+  [AppRoutes.AUTH]: '/auth',
   [AppRoutes.MAIN]: '/',
   [AppRoutes.NOT_FOUND]: '*'
 }
 
 export const routeConfig: Record<AppRoutes, AppRouteProps> = {
-  [AppRoutes.LOGIN]: {
-    path: routePath.login,
-    element: <LoginPage />,
+  [AppRoutes.AUTH]: {
+    path: routePath.auth,
+    element: <AuthPage />,
   },
   [AppRoutes.MAIN]: {
     path: routePath.main,

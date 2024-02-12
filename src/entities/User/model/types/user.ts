@@ -1,6 +1,7 @@
 export interface User {
   id: string;
-  email: string
+  email: string;
+  username: string;
 }
 
 export interface UserSchema {

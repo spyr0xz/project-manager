@@ -1,0 +1,22 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 46px;
+  gap: 18px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.inputWrapper input {
+  min-width: 369px;
+}
+
+.btn {
+  width: 100%;
+  box-shadow: 0 4px 61px 0 rgba(77, 71, 195, 0.4);
+}

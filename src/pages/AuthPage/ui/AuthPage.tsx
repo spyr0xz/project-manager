@@ -1,7 +1,7 @@
 import { useState } from "react";
 import LoginForm from "../../../widgets/LoginForm/ui/LoginForm";
 import { SignUpForm } from "../../../widgets/SignUpForm";
-import cls from "./LoginPage.module.scss";
+import cls from "./AuthPage.module.scss";
 import { classNames } from "../../../shared/lib/classNames/classNames";
 import { useAppSelector } from "../../../shared/lib/hooks/hooks";
 import { getUserAuthData } from "../../../entities/User/model/selector/getUserAuthData/getUserAuthData";

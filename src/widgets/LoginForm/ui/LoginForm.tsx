@@ -54,7 +54,7 @@ const LoginForm = memo((props: LoginFormProps) => {
           value={email}
           onChange={onChangeEmail}
           className={cls.input}
-          type="text"
+          type="email"
           placeholder="Enter your email"
         />
         <Input
