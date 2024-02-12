@@ -41,16 +41,40 @@ server.post('/login', (req, res) => {
 
 server.post('/signup', (req, res) => {
     try {
-        console.log(req);
-    } catch (error) {
-        
+        const { username, email, password } = req.body;
+        const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+        const { users = [] } = db;
+
+        // check unique mail
+        const isEmailUnique = users.every((user) => user.email !== email);
+
+        if (!isEmailUnique) {
+            return res.status(400).json({ message: 'Email already exists' });
+        }
+
+        // new user
+        const newUser = { username, email, password };
+        users.push(newUser);
+
+        // refresh
+        fs.writeFileSync(path.resolve(__dirname, 'db.json'), JSON.stringify({ users }));
+
+        return res.status(201).json(newUser);
+    } catch (e) {
+        console.log(e);
+        return res.status(500).json({ message: e.message });
     }
-})
+});
 
 // check auth
 // eslint-disable-next-line
 server.use((req, res, next) => {
+    if (req.path === '/register') {
+        // Пропустить запрос для создания пользователя без аутентификации
+        return next();
+    }
     if (!req.headers.authorization) {
+        
         return res.status(403).json({ message: 'AUTH ERROR' });
     }
 
