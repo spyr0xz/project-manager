@@ -1,4 +1,5 @@
 import { UserSchema } from "../../../../entities/User";
+import { SignupByEmailSchema } from "../../../../features/SignUpByEmail";
 import { LoginByEmailSchema } from "../../../../features/loginByEmail";
 
 export interface StateSchema {
@@ -6,4 +7,5 @@ export interface StateSchema {
 
   // async reducers
   loginForm?: LoginByEmailSchema;
+  signupForm?: SignupByEmailSchema;
 }
